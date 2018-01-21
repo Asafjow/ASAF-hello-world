@@ -3,7 +3,7 @@ const app = require('express')()
 app.get('/kill', require('crasher'))
 
 app.get('/*', (req, res) => {
-	res.send('hello, world\n This is Asaf hello, world\n')
+	res.send('hello, world This is Asaf hello, world\n')
 	console.log(new Date().toLocaleTimeString(), req.ip.split(":")[3], req.url)
 })
 
